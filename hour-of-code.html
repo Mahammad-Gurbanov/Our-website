@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Mahammad Gurbanov
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>LogicX</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <!--All sections navigation bar-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <!--Trying to create a dropdown menu-->
+                    <li>
+                        <a href="team-members.html">Team members</a>
+                        <ul class="dropdown">
+                            <li><a href="team-members.html#gunay">Gunay Shabiyeva</a></li>
+                            <li><a href="team-members.html#nuray">Nuray Akbarli</a></li>
+                            <li><a href="team-members.html#mahammad">Mahammad Gurbanov</a></li>
+                            <li><a href="team-members.html#elvin">Elvin Garabayli</a></li>
+                        </ul>
+                    
+                    </li>
+                    <li>
+                        <a href="hour-of-code.html">Hour of Code</a>
+                        <ul class="dropdown">
+                            <li><a href="hour-of-code.html#duringevent">Event</a></li>
+                            <li><a href="hour-of-code.html#community">Community</a></li>
+                            <li><a href="hour-of-code.html#video">Video</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="web-project.html">Website Project</a></li>
+                    <li><a href="code-artist.html">Code Artist</a>
+                        <ul class="dropdown">
+                            <li><a href="code-artist.html#instructors_code_art">Instructor's Code Art</a></li>
+                            <li><a href="code-artist.html#our_project">Our Code Art</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <img class="logo" src="media/logo.jpeg" alt="logo">
+            </nav>
+            <hr>
+            <header>
+                <div class="titleofwebpage">
+                    <h1>Hour of Code Event</h1>
+                    <!--Use JS to make it more attractive-->
+                </div>    
+                <p>We have conducted Hour of Code Event in Baku Secondary School <a href="#community">No.242</a>
+                   <br>A lot <a href="#duringevent">happened during the event</a>.Overall, it was a great experience
+                </p>
+
+                <!--Group photo-->
+                <figure>
+                    <img src="media/grouphc.jpeg" alt="Our team-members and the classrom">
+                    <figcaption>Us with our heartwarming and sincery community</figcaption>
+                </figure>
+                <hr>
+            </header>
+        <main>
+            <!--Main part of our website-->
+            <section id = "duringevent">
+                <h2>What happend During the event?</h2>
+                <!--Pictures of us teaching-->
+                <figure class="show_images_in_line">
+                    <img alt="Mahammad and Gunay explaning exercise to the class" src="media/mahammad&gunayexplaningcode.jpeg">
+                    <img alt="Nuray and Elvin explaning exercise to the class" src="media/elvin&nurayexplaningcode.jpeg">
+                </figure>
+                <!--Read less/more block-->
+
+                <!--The part of the report that should be shown-->
+                <div class="report_card">
+                    <input type="checkbox" id="detailed_report">
+                    <div class="report_part_shown">
+                        
+                        <p>
+                        During the Hour of Code event, everything ran smoothly. As Team 74, we worked hard to create an engaging and 
+                        friendly environment for the children. Initially, they were shy and hesitant, but a few jokes and a warm approach 
+                        helped break the ice.We began by asking if any of them had prior experience with similar courses. None of them had, 
+                        which made the event even more interesting, as everyone was learning something new...
+                        </p>
+                        <label for="detailed_report">Read more</label>
+                    </div>
+                    
+                    <!--The rest of the report-->
+                    <div class="rest_of_report">
+                        <p>
+                        During the Hour of Code event, everything ran smoothly. As Team 74, we worked hard to create an engaging and 
+                        friendly environment for the children. Initially, they were shy and hesitant, but a few jokes and a warm approach 
+                        helped break the ice.We began by asking if any of them had prior experience with similar courses. None of them had,
+                        which made the event even more interesting, as everyone was learning something new
+                        <br>We started with a brief introduction to programming. We discussed the general steps involved in programming and explained how complex software, like 
+                        games and apps, is made up of small, relatively simple codes. In other words, we demistified coding. We also addressed 
+                        a common misconception in computer science—that the focus should be on learning programming languages rather than on 
+                        analytical thinking and problem-solving. We emphasized that coding is mainly about solving problems, and programming 
+                        languages are just tools to help achieve that.<br>As recommended in instructions we used Classic Maze puzzle.We displayed 
+                        the puzles on a projector so everyone could see the board and participate in problem-solving. First, we explained the meaning 
+                        of each block, how they function, and how to connect them. To be completely honest, we simply asked what they thought those blocks 
+                        meant, and they were able to explain blocks like 'irəli get' and 'sağa dön' accurately<br>After solving the first maze problem, we 
+                        discussed what happens in the background, like what makes the character move forward when "Run" is pressed. We showed them the 
+                        JavaScript code and briefly explained the difference between syntax and semantics. As we solved more problems, we introduced 
+                        the concept of sequence in coding. We demonstrated this with the 3rd problem by intentionally placing the correct blocks in 
+                        the wrong order to show the incorrect output. Then, we arranged the blocks correctly, highlighting that the sequence of commands 
+                        is just as important as using the correct blocks.<br>Next, we introduced a more complex topic: loops. We explained what a loop is, 
+                        gave real-life examples, and discussed how programmers use loops to avoid repetitive code. We also explained the difference between 
+                        counted and conditional loops. Using the 7th and 18th problems in the Classic Maze, we demonstrated which type of loop is best suited 
+                        for different tasks. In the 18th problem, we also introduced conditional statements, showing how conditions can influence decisions 
+                        in both real life and programming. This exercise helped teach the basics of control flow.<br>The kids thoroughly enjoyed the event. 
+                        Even though the session ended and their parents were waiting, many of them didn't want to leave and asked if we could come back for 
+                        another session. Some of them even ran to their parants and said those teachers(pointing at us) tought us lots of things and they were 
+                        genuinely excited and happy about the experience they gained. Their progress was impressive. We hadn't expected them to grasp everything 
+                        so quickly. After a single explanation, they answered our questions with ease and solved challenging problems involving loops and conditions, 
+                        like the 18th problem, through effective brainstorming
+                        </p>
+                        <label for="detailed_report">Show less</label>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section id = "community">
+                <!--Info about Community-->
+                <h2>Our Community</h2>
+                <figure>
+                    <img src="media/OurPhotoWithTeachers.jpeg" alt="Us with the teachers">
+                    <figcaption>A selfie with the teachers</figcaption>
+                </figure>
+                <p>
+                    As our community, we chose Baku Secondary School No. 242 for our event, where we engaged with a total of 33 enthusiastic 
+                    3rd-grade pupils. Their energy and active participation made the event a truly memorable experience. We would also like 
+                    to extend our heartfelt thanks to the school's director, Sevinc Bayramova, and to  teachers, Gunay Ehmedova and Beyim Guliyeva. 
+                    Their support was invaluable. Teachers Gunay and Beyim kindly stepped in to help us manage the class when needed, while Ms. 
+                    Bayramova graciously granted us permission to conduct the Hour of Code event at the school.
+                    <br>
+                    You can visit 242 Facabook page from <a href="https://www.facebook.com/school242/?locale=az_AZ" target="_blank">here</a>
+                </p>
+                
+            </section>
+            <hr>
+            <section id = "video">
+                <!--Engaging Video-->
+                <h2>Engaging Video from the Event</h2>
+                <video src="media/VideofromHourofCodeEvent.mp4" controls>
+                    Sorry video can't be opened
+                </video>
+                
+                <!--More info on SM-->
+                <p>
+                    For more videos and images like this visit our <a href="https://www.instagram.com/p/DCL2oNUMx9F/?igsh=dmk5MGw2OHIwN3po" target="_blank">
+                        instagram page
+                    </a>.
+                </p>
+            </section>
+            <hr>
+        </main>
+        <footer>
+            <div class="footer_top">
+            <!--Footer for all sections-->
+                <ul>
+                    <li class="center">Our Codecademy Pages</li>
+                    <li>
+                        <ul class="codecademy_pages">
+                            <li><a href="https://www.codecademy.com/profiles/gunayshabiyeva" target="_blank">Gunay Shabiyeva</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/NurayAkbarli" target="_blank">Nuray Akbarli</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/MahammadGurbanov" target="_blank">Mahammad Gurbanov</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/ElvinGarabayli" target="_blank">Elvin Garabayli</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_bottom">
+                <p class="center default-size">Date Created: 2024, December 1</p>
+            </div>
+        </footer>
+        <script src="scripts.js"></script>
+    </body>
+</html>

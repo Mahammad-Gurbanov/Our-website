@@ -1,0 +1,287 @@
+/*
+:root {
+    --ada-blue: #336178;
+    --ada-red: #ae485e;
+}
+
+body {
+    background-color: var(--ada-blue);
+}
+This is the color for background given by insturctors
+*/
+
+/*Resetting browsing settings so we can easily apply css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white; /* The color I(Mahammad) chose for now*/
+    margin-top: 70px; 
+    font-family: 'IBM Plex Mono', monospace;
+    min-height: 100vh;
+    /*Adding background image*/
+    background-image: url('media/backgroundimage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*Centers the main part*/
+main, header {
+    width: 90%;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+
+
+/*Using css tricks to create a show more/less block note we will add coloring later*/
+
+.report_card {
+    width: auto;
+    padding: 22px 30px;
+    line-height: 1.9;
+    /*Remember to style this*/
+}
+
+#detailed_report {
+    display: none; /*Makes checkbox invisible*/
+}
+
+.report_card label {
+    display: inline-block;
+    cursor: pointer;
+    /*Remember to style this*/
+}
+
+.rest_of_report {
+    display: none;
+}
+
+#detailed_report:checked ~ .rest_of_report {
+    display: block; /*Should make rest of the report and show less visible when checkbox is checked(i.e. read more is pressed)*/
+}
+
+#detailed_report:checked ~ .report_part_shown {
+    display: none; /*Should make the part of the report,and show more invisible*/
+}
+
+
+/*Navigation panel*/
+
+nav {
+    display:flex;
+    justify-content: space-between; /*Should make everything fit perfectly on top*/
+    align-items: center;
+    background-color: rgba(15,11,62,255);
+    width: 100%;
+    height: 70px;
+    position: fixed; /*Fixes the position of navigation*/
+    top: 0; /*Puts the nav on top*/
+    left: 0;
+    z-index: 998;
+}
+
+.logo {
+   height: 45px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgba(103,237,248,255);
+    font-size: 18px;
+    display: block;
+    padding: 20px 25px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(15,11,62,255);
+    width: 213px; /*makes the names fit*/
+    z-index: 999;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block; /*Should make the menu visible when hovered*/
+}
+
+/*Changing how the links in dropdown list looks*/
+ul.dropdown li {
+    padding: 0;
+    width: 100%;/*This should make hover effect occupy the full part*/
+}
+
+ul.dropdown li a {
+    display: block;
+    padding: 20px 25px;
+}
+
+
+nav li a:hover {
+    background: rgba(15,11,125,255);
+    border-radius: 4px;
+}
+
+/*Should stop overflow*/
+.titleofwebpage {
+    padding-top: 70px;
+}
+/*Choose Font*/
+
+
+
+
+
+h1 {  font-size: 3rem;
+      text-transform: uppercase;  cursor: pointer;
+      transition: color 0.3s ease-in-out;
+}
+
+/* Styling for the instruction */
+
+span {  font-size: 1rem;
+        color: #ffffff50;  
+        text-transform: uppercase;
+}
+
+/*Website Footer*/
+.footer_top {
+    background-color: rgba(46, 34, 93, 255);
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer_bottom {
+    background-color: rgba(15,11,62,255);
+}
+
+
+footer ul {
+    list-style: none;
+}
+
+.codecademy_pages li {
+    display: inline;
+}
+
+.codecademy_pages li a{
+    padding: 25px 20px;
+    color: rgba(103,237,248,255);
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+    color: rgba(103,237,248,255);
+}
+
+.codecademy_pages li a:hover {
+    color:yellow;
+}
+
+
+/* Styles team member images, making them circular with a hover effect that slightly enlarges the image */
+
+#gunay img, #nuray img, #mahammad img, #elvin img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+#gunay img:hover, #nuray img:hover, #mahammad img:hover, #elvin img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Styles images inside figures, aligning them in a row for large screens and stacking vertically on smaller screens, with hover effects */
+figure {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    width: 100%; 
+}
+
+figure img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+section video {
+    width: 300px;  
+    height: 300px; 
+    object-fit: cover; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section figure {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    figure {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/*Canvas element*/
+canvas {
+    margin: 20px auto;
+}
+
+div.our_project {
+    margin: 20px auto;
+}
+
+#our_canvas {
+    border: 1px solid rgb(0, 13, 255);
+    background-color:rgb(0, 60, 120);
+}
+
+/*Making the images show in a single line*/
+.show_images_in_line {
+    display: flex;
+    gap: 5px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: arial;
+}
+
+p.default-size {
+    font-size: 16px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LogicX</title>
+        <!--Write this JS code in JS file-->
+        <script>
+            function showMessage(memberId, message) {
+                const element = document.getElementById(memberId);
+                if (element.style.display === "none" || element.style.display === "") {
+                    element.innerText = message;
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="styles.css">  
+        <!--<script type="text/javascript" src="scripts.js"></script>-->
+    </head>
+    <body>
+            <!--All sections navigation bar-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <!--Trying to create a dropdown menu-->
+                <li>
+                    <a href="team-members.html">Team members</a>
+                    <ul class="dropdown">
+                        <li><a href="team-members.html#gunay">Gunay Shabiyeva</a></li>
+                        <li><a href="team-members.html#nuray">Nuray Akbarli</a></li>
+                        <li><a href="team-members.html#mahammad">Mahammad Gurbanov</a></li>
+                        <li><a href="team-members.html#elvin">Elvin Garabayli</a></li>
+                    </ul>
+                
+                </li>
+                <li>
+                    <a href="hour-of-code.html">Hour of Code</a>
+                    <ul class="dropdown">
+                        <li><a href="hour-of-code.html#duringevent">Event</a></li>
+                        <li><a href="hour-of-code.html#community">Community</a></li>
+                        <li><a href="hour-of-code.html#video">Video</a></li>
+                    </ul>
+                </li>
+                <li><a href="web-project.html">Website Project</a></li>
+                <li><a href="code-artist.html">Code Artist</a>
+                    <ul class="dropdown">
+                        <li><a href="code-artist.html#instructors_code_art">Instructor's Code Art</a></li>
+                        <li><a href="code-artist.html#our_project">Our Code Art</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img class="logo" src="media/logo.jpeg" alt="logo">
+        </nav>
+        <header>
+            <div class="titleofwebpage">
+               <h1>Team Members</h1>
+            </div>    
+            <hr>
+        </header>
+        <main>
+            <div id="gunay">
+                <h2><p>Gunay Shabiyeva</p></h2>
+                <img src="media/photo_5357135923055289894_y.jpg" alt="Photo of Gunay Shabiyeva">  
+                <button onclick="showMessage('info1', 'Gunay Shabiyeva is 20 years old. She is a second-year student majoring in Computer Science at ADA University. She was admitted to ADA through the DIM exam, scoring 622. Her goal is to become a computer scientist specializing in microchip technology, contributing to innovative advancements in computing and electronics.')">More</button>
+                <p id="info1" style="display: none;"></p>
+            </div>
+
+            <div id="nuray">
+                <h2><p>Nuray Akbarli</p></h2>
+                <img src="media/photo_5345777491198994473_y (1).jpg" alt="Photo of Nuray Akbarli"> 
+                <button onclick="showMessage('info2', 'Nuray Akbarli is 18 years old. She is a second-year student majoring in Information Technology at ADA University. She was admitted to ADA through the SAT exam. Her biggest dream is to become a founder of a computer company.')">More</button>
+                <p id="info2" style="display: none;"></p>
+            </div>
+
+            <div id="mahammad">
+                <h2><p>Mahammad Gurbanov</p></h2>
+                <img src="media/photo_5345777491198994468_y (1).jpg" alt="Photo of Mahammad Gurbanov"> 
+                <button onclick="showMessage('info3', 'Mahammad Gurbanov is 17 years old. He is a first-year student majoring in Computer Science at ADA University. He was admitted to ADA through the DIM exam, scoring 676. His future goal is to become a professional in his major.')">More</button>
+                <p id="info3" style="display: none;"></p>
+            </div>
+
+            <div id="elvin">
+                <h2><p>Elvin Garabayli</p></h2>
+                <img src="media/photo_5345777491198994454_y (1).jpg" alt="Photo of Elvin Garabayli"> 
+                <button onclick="showMessage('info4', 'Elvin Garabayli is 17 years old. He is a first-year student majoring in Information Technology at ADA University. He was admitted to ADA through the SAT exam, scoring 1300 (math score of 800). His future goal is to become a professional developer and establish his own company.')">More</button>
+                <p id="info4" style="display: none;"></p>
+            </div>
+        </main>
+        <footer>
+            <div class="footer_top">
+            <!--Footer for all sections-->
+                <ul>
+                    <li class="center">Our Codecademy Pages</li>
+                    <li>
+                        <ul class="codecademy_pages">
+                            <li><a href="https://www.codecademy.com/profiles/gunayshabiyeva" target="_blank">Gunay Shabiyeva</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/NurayAkbarli" target="_blank">Nuray Akbarli</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/MahammadGurbanov" target="_blank">Mahammad Gurbanov</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/ElvinGarabayli" target="_blank">Elvin Garabayli</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_bottom">
+                <p class="center default-size">Date Created: 2024, December 1</p>
+            </div>
+        </footer>
+    </body>
+</html>
+

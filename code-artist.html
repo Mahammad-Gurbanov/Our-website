@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Mahammad Gurbanov 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>LogicX</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <!--All sections navigation bar-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <!--Trying to create a dropdown menu-->
+                <li>
+                    <a href="team-members.html">Team members</a>
+                    <ul class="dropdown">
+                        <li><a href="team-members.html#gunay">Gunay Shabiyeva</a></li>
+                        <li><a href="team-members.html#nuray">Nuray Akbarli</a></li>
+                        <li><a href="team-members.html#mahammad">Mahammad Gurbanov</a></li>
+                        <li><a href="team-members.html#elvin">Elvin Garabayli</a></li>
+                    </ul>
+                
+                </li>
+                <li>
+                    <a href="hour-of-code.html">Hour of Code</a>
+                    <ul class="dropdown">
+                        <li><a href="hour-of-code.html#duringevent">Event</a></li>
+                        <li><a href="hour-of-code.html#community">Community</a></li>
+                        <li><a href="hour-of-code.html#video">Video</a></li>
+                    </ul>
+                </li>
+                <li><a href="web-project.html">Website Project</a></li>
+                <li><a href="code-artist.html">Code Artist</a>
+                    <ul class="dropdown">
+                        <li><a href="code-artist.html#instructors_code_art">Instructor's Code Art</a></li>
+                        <li><a href="code-artist.html#our_project">Our Code Art</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img class="logo" src="media/logo.jpeg" alt="logo">
+        </nav>
+        <hr>
+        <header>
+            <div class="titleofwebpage">
+                <h1>Code Artist</h1>
+            </div>
+        </header>
+        <main>
+            <section style="text-align:center" id="instructors_code_art">
+                <h2>Code Art Made by Insrtuctors</h2>
+                <canvas id="art-canvas" width="640" height="480">
+                    Sorry ... your browser doesn't support the HTML5 canvas element.
+                </canvas>
+                <h3>How It Works?</h3>
+                <p>First, the artist is moved to the center of the canvas, ensuring it starts drawing from the middle of the screen. Once positioned, the program enters a loop that iterates (600 - 3) / 3 = 199 times. During each iteration, the artist moves a distance equal to the current value of the counter (which progresses as 3, 6, 9, and so on) in the direction it is currently facing. This movement is always drawn on the canvas due to the stroke function being active. After each movement, the artist turns 89 degrees clockwise. This specific turning angle ensures that the lines do not overlap completely and prevents the creation of a perfect rectangle, instead forming a shape with slightly skewed sides. If you zoom in on the center of the canvas, you can observe this shape in detail. As the loop progresses and the lengths of the lines grow longer, the result is a spiral pattern that expands outward, forming the overall drawing on the canvas.</p>
+            </section>          
+
+            <script type="text/javascript">
+                // Get reference to the 2D context of the canvas
+                let canvas = document.getElementById("art-canvas");
+                let context = canvas.getContext("2d");
+                // Set the color for drawing lines using red, green and blue components
+                // context.strokeStyle = 'rgb(255, 0, 0)';
+                // randomizes the colors
+                context.strokeStyle = `rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})`;
+                DrawSpiral(context);
+            </script>
+            <hr>
+            <section class='our_project' id='our_project' style="text-align: center">
+                <h2>Our Code Art Project</h2>
+                <canvas id="our_canvas" width="640" height="480">
+                    Sorry, your browser doesn't support the HTML5 canvas element.
+                </canvas>
+                <h3>How It Works?</h3>
+                <div class="report_card">
+                    <input type="checkbox" id="detailed_report">
+                    <div class="report_part_shown">
+                        <p>First, we created our canvas in HTML using the 'canvas' tag and gave it a unique ID of our_canvas so it could be easily selected in JavaScript using the getElementById function. After accessing the canvas, we declared a variable named c to easily access the canvas' drawing methods using getContext("2d"). This allowed us to begin creating our code art.
+                            We then created a "jump backward" function, which moves the artist in the opposite direction of its current facing by a specified distance. Note that the context variable in every function allows us to draw the art on the specific canvas...
+                        </p>
+                        <label for="detailed_report">Read more</label>
+                    </div>
+                    <div class="rest_of_report">
+                        <p>
+                            First, we created our canvas in HTML using the 'canvas' tag and gave it a unique ID of our_canvas so it could be easily selected in JavaScript using the getElementById function. After accessing the canvas, we declared a variable named c to easily access the canvas' drawing methods using getContext("2d"). This allowed us to begin creating our code art.
+                            We then created a "jump backward" function, which moves the artist in the opposite direction of its current facing by a specified distance. Note that the context variable in every function allows us to draw the art on the specific canvas.
+                            We used this function inside the drawSnowflakeBranch function because, each time we drew a part of the snowflake, we needed to move the artist back to the starting position of the line.
+                            A single snowflake branch follows a pattern: move forward, turn right 45 degrees, jump backward (to return to the starting point of the line), turn left 90 degrees (since the artist was facing 45 degrees, this makes the artist face 45 degrees to the left of its original direction), move forward again, and then jump backward. At this point, the artist is back at the end of the first line but is facing 45 degrees to the left. To correct this, we turn the artist 45 degrees to the right, so it faces its original direction (east). We repeated this process 3 times (using a for loop) to create a single branch. The context.stroke function made all these lines visible.
+                            Each small snowflake consists of 8 of these branches. In the drawSnowflake function, we used a for loop to call drawSnowflakeBranch and, after drawing the branch, moved the artist backward by 30px (since each line of a branch moves forward by 10px, and we moved 3 times, the artist moves a total of 30px). This brings the artist back to the center of the snowflake. We then turned the artist 45 degrees (360°/8 = 45°) to start drawing the next branch, thus completing the 8 branches of a single small snowflake.
+                            Next, we created a larger snowflake using the smaller snowflakes. The larger snowflake was designed to have 6 branches because 8 branches would make it look too cluttered. To create the larger snowflake, we looped through the function 6 times. From the center, we moved forward 60px, drew the small snowflake, then moved back 60px to return to the center. Afterward, we turned the artist 60 degrees (360°/6 = 60°) to create a full large snowflake.
+                        </p>
+                        <label for="detailed_report">Show less</label>
+                    </div>
+                </section>
+            <script type="text/javascript">
+                let our_canvas = document.getElementById("our_canvas");
+                let c = our_canvas.getContext("2d");
+                c.strokeStyle = 'rgba(173, 216, 230, 1)';
+                // Function which will create our code art
+                drawLargeSnowflake(c);
+            </script>
+
+        </main>
+        <footer>
+            <div class="footer_top">
+            <!--Footer for all sections-->
+                <ul>
+                    <li class="center">Our Codecademy Pages</li>
+                    <li>
+                        <ul class="codecademy_pages">
+                            <li><a href="https://www.codecademy.com/profiles/gunayshabiyeva" target="_blank">Gunay Shabiyeva</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/NurayAkbarli" target="_blank">Nuray Akbarli</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/MahammadGurbanov" target="_blank">Mahammad Gurbanov</a></li>
+                            <li><a href="https://www.codecademy.com/profiles/ElvinGarabayli" target="_blank">Elvin Garabayli</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_bottom">
+                <p class="center default-size">Date Created: 2024, December 1</p>
+            </div>
+        </footer>
+    </body>
+</html>
+
