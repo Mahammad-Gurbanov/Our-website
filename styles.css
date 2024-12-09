@@ -23,11 +23,12 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     min-height: 100vh;
     /*Adding background image*/
-    background-image: url('Media/backgroundimage.png');
+    background-image: url('https://github.com/Mahammad-Gurbanov/Our-website/blob/main/backgroundimage.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+
 }
 
 /*Centers the main part*/
