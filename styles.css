@@ -18,7 +18,7 @@ This is the color for background given by insturctors
     box-sizing: border-box;
 }
 body {
-    background-color: white; /* The color I(Mahammad) chose for now*/
+     /* The color I(Mahammad) chose for now*/
     margin-top: 70px; 
     font-family: 'IBM Plex Mono', monospace;
     min-height: 100vh;
